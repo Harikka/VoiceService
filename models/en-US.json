@@ -1,0 +1,191 @@
+{
+	"invocation": "my test app",
+	"intents": [
+		{
+			"name": "password",
+			"phrases": [
+				"{password}"
+			],
+			"inputs": [
+				{
+					"name": "password",
+					"type": {
+						"alexa": "password"
+					}
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"invocationName": "tracer ensemble",
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StartOverIntent",
+						"samples": []
+					},
+					{
+						"name": "SecurityIntent",
+						"slots": [
+							{
+								"name": "password",
+								"type": "password"
+							}
+						],
+						"samples": [
+							"{password}"
+						]
+					},
+					{
+					"name": "AllBuildingStatusIntent",
+                    "slots": [
+                        {
+                            "name": "allbuildingstatus",
+                            "type": "Builddictonary"
+                        }
+                    ],
+                    "samples": [
+                        "can you provide the {allbuildingstatus} status of all buildings"
+					]
+				   }
+				],
+				"types": [
+					{
+						
+						"name": "Builddictonary",
+						"values": [
+							{
+								"name": {
+									"value": "to"
+								}
+							},
+							{
+								"name": {
+									"value": "over"
+								}
+							},
+							{
+								"name": {
+									"value": "third"
+								}
+							},
+							{
+								"name": {
+									"value": "second"
+								}
+							},
+							{
+								"name": {
+									"value": "continue"
+								}
+							},
+							{
+								"name": {
+									"value": "please"
+								}
+							},
+							{
+								"name": {
+									"value": "generate"
+								}
+							},
+							{
+								"name": {
+									"value": "reduce"
+								}
+							},
+							{
+								"name": {
+									"value": "acnkowledge"
+								}
+							},
+							{
+								"name": {
+									"value": "individual"
+								}
+							},
+							{
+								"name": {
+									"value": "all"
+								}
+							},
+							{
+								"name": {
+									"value": "help"
+								}
+							},
+							{
+								"name": {
+									"value": "stop"
+								}
+							},
+							{
+								"name": {
+									"value": "start"
+								}
+							},
+							{
+								"name": {
+									"value": "no"
+								}
+							},
+							{
+								"name": {
+									"value": "yes"
+								}
+							},
+							{
+								"name": {
+									"value": "email"
+								}
+							},
+							{
+								"name": {
+									"value": "report"
+								}
+							},
+							{
+								"name": {
+									"value": "current"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	}
+}
